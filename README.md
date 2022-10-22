@@ -1,0 +1,1 @@
+[![Coverage Status](https://coveralls.io/repos/github/f1rtuna/swe-app-1/badge.svg)](https://coveralls.io/github/f1rtuna/swe-app-1)
