@@ -11,18 +11,18 @@ install:
   - pip install importlib-metadata
   - pip install black
   - pip install flake8
-  # - pip install coverage
-  # - pip insatll coveralls
+  - pip install coverage
+  - pip insatll coveralls
 
 script:
   - python manage.py test
   - python -m black . --check .
   - flake8 .
-  # - coverage run --source=ebdjango,polls manage.py test
-  # - python -m coverage report -m
+  - coverage run --source=ebdjango,polls manage.py test
+  - coverage report -m
   
-# after_script:
-#   - coveralls
+after_script:
+  - coveralls
 
 deploy:
   provider: elasticbeanstalk
