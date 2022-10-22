@@ -33,3 +33,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-502730698175"
   on:
     all_branches: true
+
+after_success:
+  -eb deploy
