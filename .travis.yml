@@ -10,5 +10,17 @@ install:
   - pip install -r requirements.txt
 
 script:
+  - pytest tests/test.py
   - black --check .
-  - coverage run --source=my_package manage.py test
+  # - coverage run --source=my_package manage.py test
+  
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key: $SECRETACCESSKEY
+  region: "us-west-2"  
+  app: "django-tutorial"
+  env: "django-env"
+  bucket_name: "elasticbeanstalk-us-east-1-017801987097"
+  on:
+    branch: master
