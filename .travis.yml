@@ -9,14 +9,14 @@ env:
 install:
   - pip install -r requirements.txt
   - pip install importlib-metadata
-  # - pip install black
+  - pip install black
   # - pip install flake8
   # - pip install coverage
   # - pip insatll coveralls
 
 script:
   - python manage.py test
-  # - python -m black . --check .
+  - python -m black . --check .
   # - coverage run --source=ebdjango,polls manage.py test
   # - python -m coverage report -m
   
@@ -33,5 +33,3 @@ deploy:
   bucket_name: "elasticbeanstalk-us-west-2-502730698175"
   on:
     all_branches: true
-    
-
