@@ -6,6 +6,7 @@ coverage==6.5.0
 coveralls==3.3.1
 Django==2.2
 docopt==0.6.2
+ez-setup==0.9
 flake8==5.0.4
 idna==3.4
 importlib-metadata==5.0.0
