@@ -10,10 +10,13 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - pytest tests/test.py
-  - black --check .
-  # - coverage run --source=my_package manage.py test
+  - python -m black . --check .
+  - coverage run --source=ebdjango,polls manage.py test
+  - python -m coverage report -m
   
+after_script:
+  - coveralls
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
