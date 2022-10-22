@@ -8,7 +8,11 @@ env:
 
 install:
   - pip install -r requirements.txt
-
+  - pip install black
+  - pip install flake8
+  - pip install coverage
+  - pip insatll coveralls
+  
 script:
   - python -m black . --check .
   - coverage run --source=ebdjango,polls manage.py test
