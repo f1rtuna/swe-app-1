@@ -37,4 +37,5 @@ deploy:
     
 #hopefully this auto-deploys
 after_success:
-  -eb deploy
+  - eb deploy
+  
